@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<p> These are the posts</p>
+
+<% for(var i = 0;i<posts.length;i++){ %>
+	<li> <%= posts[i].Title.toUpperCase() %> by <%= posts[i].Author %> </li>
+<% } %>
+
+<% posts.forEach(function(post){ %>
+	<li>
+		<%= post.Title %> - <strong> <%= post.Author %> </strong>
+	</li>
+<% }); %>
+
+<% include partials/footer %>
